@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>예제 이동하기</h2>
+    <div>
+        <a th:href="@{/thymeleaf/01}">th:Text 이동</a>
+    </div>
+    <div>
+        <a th:href="@{/thymeleaf/02}">th:TextVO 이동</a>
+    </div>
+    <div>
+        <a th:href="@{/thymeleaf/03}">th:Each 이동</a>
+    </div>
+    <div>
+        <a th:href="@{/thymeleaf/04}">th:if 이동</a>
+    </div>
+    <div>
+        <a th:href="@{/thymeleaf/05}">th:switch 이동</a>
+    </div>
+    <div>
+        <a th:href="@{/thymeleaf/06(str1='데이터1', str2='데이터2')}">쿼리스트링 전송 및 이동</a>
+    </div>
+
+    <hr/>
+
+    <h2>타 사이트 방문하기</h2>
+    <div>
+        <a th:href="@{https://www.thymeleaf.org}" target="_blank">타임리프 공식 사이트 이동</a>
+    </div>
+    <div>
+        <a th:href="@{https://www.google.com}" target="_blank">구글 이동</a>
+    </div>
+    <div>
+        <a th:href="@{https://www.naver.com}" target="_blank">네이버 이동</a>
+    </div>
+</body>
+</html>

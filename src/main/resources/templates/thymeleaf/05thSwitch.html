@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    td {
+        border: 1px dotted grey;
+        padding: 0 25px 5px 0;
+    }
+</style>
+<body>
+<table>
+    <thead>
+    <tr>
+        <td>조건</td>
+        <td>제목</td>
+        <td>내용</td>
+        <td>시간</td>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- for in 문법과 비슷함 -->
+    <tr th:each="list, status: ${listVO}">
+        <!-- switch case 문법과 비슷함 -->
+        <td th:switch="${status.even}">
+            <span th:case=true>성공</span>
+            <span th:case=false>실패</span>
+        </td>
+        <td th:text="${list.title}"></td>
+        <td th:text="${list.contents}"></td>
+        <td th:text="${list.currentTime}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

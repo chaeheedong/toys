@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--
+        Controller 에서 model 의 key(${data})의 값이 있으면 해당 값 출력한다
+        -------------------------------------------------------------
+        model.addAttribute("data", "th:text usage.");
+     -->
+    <p th:text="${data}">Hello Thymeleaf.</p>
+</body>
+</html>

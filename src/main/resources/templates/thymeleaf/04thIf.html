@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    td {
+        border: 1px dotted grey;
+        padding: 0 25px 5px 0;
+    }
+</style>
+<body>
+<table>
+    <thead>
+    <tr>
+        <td>홀짝</td>
+        <td>제목</td>
+        <td>내용</td>
+        <td>시간</td>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- for in 문법과 비슷함 -->
+    <tr th:each="list, status: ${listVO}">
+        <td th:if="${status.even}" th:text="짝수">if is true.</td>
+        <td th:unless="${status.even}" th:text="홀수">if is false.</td>
+        <td th:text="${list.title}"></td>
+        <td th:text="${list.contents}"></td>
+        <td th:text="${list.currentTime}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
