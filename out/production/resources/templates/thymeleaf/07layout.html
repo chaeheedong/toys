@@ -1,0 +1,16 @@
+<!doctype html>
+<html xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}">
+      <!--
+        1. 공통 컴포넌트를 위한 xmlns:layout 추가
+            -> xmlns:layout="http://ultraq.net.nz/thymeleaf/layout"
+        2. content 영역 설정
+            -> layout:decorate="~{layout/layout_html_name}"
+       -->
+
+    <div layout:fragment="content">
+        content 영역
+    </div>
+
+</html>

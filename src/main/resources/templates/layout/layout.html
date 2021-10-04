@@ -1,0 +1,18 @@
+<!doctype html>
+<html xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+      <!-- 공통 컴포넌트를 위한 xmlns:layout 추가 -->
+      <!-- header, footer 를 추가할 페이지에도 추가해주어야 함 -->
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!-- 순서대로 header, content, footer 로 선언 -->
+    <!-- html을 대체하여 추가함 -->
+    <div th:replace="fragments/header::header"></div>
+    <!-- 이곳에서 타 페이지들의 내용이 대체됨 -->
+    <div layout:fragment="content"></div>
+    <!-- html을 대체하여 추가함 -->
+    <div th:replace="fragments/footer::footer"></div>
+</body>
+</html>

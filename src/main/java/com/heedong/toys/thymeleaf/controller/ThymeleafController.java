@@ -15,7 +15,6 @@ import java.util.stream.IntStream;
 @RequestMapping("/thymeleaf")
 public class ThymeleafController {
 
-
     /**
      * th:href="@{/url}" 사용법
      * 목차만들기
@@ -109,6 +108,19 @@ public class ThymeleafController {
         model.addAttribute("str1", str1);
         model.addAttribute("str2", str2);
         return "thymeleaf/06queryString";
+    }
+
+
+    /**
+     * 공용 레이아웃 설정법
+     * 1. gradle dependencies 적용
+     * 2. /resources/templates/fragments header, footer.html 추가
+     * 3. /resources/templates/layout layout.html 추가 후 header, footer 설정
+     * @return String
+     */
+    @RequestMapping(path = "/07", method = RequestMethod.GET)
+    public String thymeleaf07() {
+        return "thymeleaf/07layout";
     }
 
 
