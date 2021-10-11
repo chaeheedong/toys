@@ -1,9 +1,15 @@
 <!doctype html>
-<html xmlns:th="http://thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 
+<head>
     <!-- th:fragment :: 타 페이지에 포함시키는 태그 -->
-    <div th:fragment="header">
-        header 영역
-    </div>
+    <!-- header 영역 -->
+    <th:block th:fragment="header">
 
+        <meta charset="UTF-8">
+
+        <!-- normalize -->
+        <link rel="stylesheet" th:href="@{../../static/css/normalize.css}">
+    </th:block>
+</head>
 </html>

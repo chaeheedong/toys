@@ -10,11 +10,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.List;
 
 @Controller
-@RequestMapping("/board")
+@RequestMapping("board")
 public class BoardController {
 
     @Autowired
     private BoardService boardService;
+
+    @RequestMapping(path = "/view", method = RequestMethod.GET)
+    public String view() {
+        return "board/view";
+    }
 
     /**
      * 게시판 전체 조회
