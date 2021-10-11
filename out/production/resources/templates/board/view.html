@@ -9,7 +9,16 @@
 <body>
 
 <th:block layout:fragment="content">
+    <span id="name">name</span>
+    <input type="text" id="test">
 
+    <script th:inline="javascript">
+        // document.getElementById('name').innerText = 'javascript';
+        $('#test').val('jquery');
+        $(function () {
+            alert('jQuery 적용 완료');
+        });
+    </script>
 </th:block>
 
 </body>

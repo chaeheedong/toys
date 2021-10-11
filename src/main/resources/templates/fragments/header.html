@@ -7,9 +7,17 @@
     <th:block th:fragment="header">
 
         <meta charset="UTF-8">
+        <link rel="shortcut icon" href="#">
 
         <!-- normalize -->
-        <link rel="stylesheet" th:href="@{../../static/css/normalize.css}">
+        <link rel="stylesheet" th:href="@{/css/normalize.css}">
+
+        <!-- jquery -->
+        <!--<script th:src="@{/js/webjars/jquery/3.6.0/dist/jquery.min.js}"></script>-->
+
+        <!-- webjars-locator-core -->
+        <script th:src="@{/js/webjars/jquery/dist/jquery.min.js}"></script>
+
     </th:block>
 </head>
 </html>
